@@ -5,7 +5,7 @@ import style from './image-gallery-item.module.css'
 const ImageGalleryItem = ({items, showImage}) => {
 const elements = items.map(({id, webformatURL, largeImageURL})=>
  <li onClick={()=> showImage({largeImageURL})} key={id} className={style.ImageGalleryItem} >
-  <img className={style.ImageGalleryItemImage} src={webformatURL} />
+  <img className={style.ImageGalleryItemImage} src={webformatURL} alt="picture" />
 </li>
 )
 
