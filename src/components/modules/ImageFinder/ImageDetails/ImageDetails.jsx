@@ -4,7 +4,7 @@ import style from './image-details.module.css'
 
 const ImageDetails = ({imageDetails}) => {
    return <div>
-        <img className={style.Image} src={imageDetails} alt='`image`' />
+        <img className={style.Image} src={imageDetails}  />
     </div>
 }
 
