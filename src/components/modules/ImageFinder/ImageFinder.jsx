@@ -2,7 +2,7 @@ import { Component } from 'react';
 import { ColorRing } from 'react-loader-spinner';
 
 import Searchbar from './Searchbar/Searchbar';
-import ImageGalleryItem from './ImageGalleryItem/ImageGalleryItem';
+
 import ImageGallery from './ImageGallery/ImageGallery';
 import Button from 'components/shared/Button/Button';
 import Modal from 'components/shared/Modal/Modal';
@@ -73,9 +73,7 @@ class ImageFinder extends Component {
     return (
       <>
         <Searchbar onSubmit={searchImage} />
-        {Boolean(search) && <ImageGallery>
-          <ImageGalleryItem items={items} showImage={showImage} />
-        </ImageGallery>}
+        {Boolean(search) && <ImageGallery items={items} showImage={showImage} />}
         {loading && <ColorRing />}
         {error && <p>{error}</p>}
         {Boolean(items.length) && (!loading && <Button onClick={loadMore}>Load more</Button>)}
